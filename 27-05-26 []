@@ -1,0 +1,48 @@
+# lista = [8, 10, 53]
+#         #0   1  2
+# print(lista[2]) #imprimira el 53 pq en el indice este es 2
+# for elemento in lista:
+#     print(elemento)
+
+
+#cerar una lista de 4 frutas
+#mostrar cada elemento individualmente
+
+# lista = ["ajo", "Durazno", "Frutilla", "Melon"]
+# vocal = "AEIOUaeiou"
+# for Frutas in lista:
+#     print(Frutas)
+#     if Frutas[0] in vocal:
+#         print(f"{Frutas} Comienza con vocal")
+#     else:
+#         print(f"{Frutas} no comienza con vocal")
+        # otra cosa es esto
+        #kiwi
+        #K = 0 i = 1 w =2 i=3
+        #se puede usar el [1] que seria durazno y si no se cambia iria por default a 0 que seria el ajo
+        #por ejemplo seria print(Frutas[1][0]) que es igual a 
+        #                               letra y fruta
+# hacer una lista de nombres y otra de apellidos
+#mostrar las listas como si fueran nombres
+#vale decir diego robles, adolfo hinako, luis mussolini
+
+# nombres = ["Eduardo", "Juanin Juan", "Tulio ", "Calcetin"]
+# apellidos = ["EDD", "Harry", "Triviño", "Con RonbosMan"]
+# for Names in range(len(nombres)):
+#     print(nombres[Names], apellidos[Names])
+
+# datos=[4, 6.9, "ola", True]
+# for i in datos:
+#     print(i)
+
+
+# matrix=[
+#     [5,8,3], [79,41,32]
+# ]
+
+# print(matrix[1][0])
+#             segunda lista y su primer numero
+# matrix.append es para el final del numero tipo matrix.append(3, "ola") apareceria despues del indice 3
+# matrix insert es lo mismo pero al revez, en ves de al final es al inicio
+# matrix.reverse es obvio
+# matrix.sort es ordenar, de que forma? ni idea

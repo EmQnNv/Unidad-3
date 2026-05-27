@@ -1,0 +1,30 @@
+# alumno = {
+#     "nombre":"Tulio Triviño",
+#     "edad": 99,
+#     "carrera":"Comentarista"
+
+# }
+
+# for key,value in alumno.items():
+#     print(key, value)
+#     # el items le dice a la consola que la variable es diccionario y deja el uso de mas valores en el for
+# print("CAMBIO DE DATOS------------------------------------")
+# alumno["email"] ="pepito123@gmail.com" #añade una nueva variable/string
+# alumno["carrera"] = "Sin trabajo" #cambia el estado del trabajo
+# del alumno["edad"] # oh no hermano esto borra la edad, ahora es inmortal
+# for key,value in alumno.items():
+#     print(key, value)
+
+productos= {
+    1:{"nombre":"Control Inalambrico",
+       "Categoria":"Super Saiyayin",
+       "precio":9000},
+    2:{"nombre":"Pilas",
+       "Categoria":"No incluidas",
+       "precio":300},
+    3:{"nombre":"Buzz LightYear",
+       "Categoria":"Al infinito y mas alla",
+       "precio":9999},
+
+}
+print(productos[1]["nombre"]) #el numero uno y el nombre
