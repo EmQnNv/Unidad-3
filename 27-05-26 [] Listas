@@ -46,3 +46,4 @@
 # matrix insert es lo mismo pero al revez, en ves de al final es al inicio
 # matrix.reverse es obvio
 # matrix.sort es ordenar, de que forma? ni idea
+#tambien esta matrix.pop, que en vez de usar el nombre como matrix.remove este usa el indice

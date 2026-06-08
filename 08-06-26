@@ -1,0 +1,184 @@
+####los diccionarios a diferencias de las listas no tienen valor de indice
+### una lista sria tipo lista = {
+###                              "palabra", "ola" creo????       }
+# vegetales = {
+#     1:"Maracuya",
+#     2:"Cebolla",
+#     3:"Manzana",
+#     4:"Un Paraguas?"
+# }
+
+# # for num, nombre in vegetales.items():
+# #     print(nombre)
+
+# print("-"*40)
+# ### se puede poner cualquier numero a las keys, no tienen que ser necesariamente en orden
+
+# vegetales[5] = "Marihuana!?!??!?!"
+# # for num, nombre in vegetales.items():
+# #     print(nombre)
+
+# ### append es solo para listas, no diccionarios
+
+
+
+# def ingresar_vegetal():
+#     print("Ingresa un Vegetal")
+#     ola = input()
+#     nuevakey = list(vegetales.keys())[-1] ### me da la key mas reciente, en caso de que nada haya sido agregado seria 5
+#     vegetales[nuevakey+1] = ola ### dentro de la variable que da las keys como lista esta se usa para agregarla al diccionario
+#     ###print(list(vegetales.items())[-1])
+#     ###se le pone -1 porque te daria todos de otra forma y crep que pk tambien en index es 8???
+# def mostrar_Vegetales():
+#     for num, nombre in vegetales.items():
+#         print(f"{num} {nombre}")
+
+
+# def Eliminar_Vegetal():
+#     mostrar_Vegetales()
+#     print("Cual vas a borrar??????????????")
+#     borrar = int(input())
+#     del vegetales[borrar]
+
+# def Actualizar_Vegetal():
+#     mostrar_Vegetales()
+#     print("Cual Vegetal Deseas Actualizar? (Usa Numeros con el orden que sale cada uno)")
+#     Key = int(input())
+#     if Key in vegetales.keys():
+#         print("Cual sera su nuevo nombre?")
+#         nombre = input()
+#         vegetales[Key] = nombre
+        
+
+# while True:
+#     try:
+#         print("1.- Agregar Vegetal")
+#         print("2.- Mostrar Vegetales ")
+#         print("3.- Eliminar Vegetal")
+#         print("4.- Actualizar Vegetal")
+#         print("5.- Salir")
+
+#         op = int(input())
+#         match op:
+#             case 1:
+#                 ingresar_vegetal()
+#             case 2:
+#                 mostrar_Vegetales()
+#             case 3:
+#                 Eliminar_Vegetal()
+#             case 4:
+#                 Actualizar_Vegetal()
+#             case 5:
+#                 print("saliendo mi rei")
+#                 break
+#             case _:
+#                 print("que wea pusiste wn")
+                
+
+
+#     except Exception as e:
+#         print("Error", e)
+
+
+
+
+
+
+
+####### Diccionario Con Diccionario
+
+
+
+# ProductosDisc={
+# 1:{"Nombre": "Maracuya", "Precio": 3000},
+# 2:{"Nombre": "Pera", "Precio": 1500},
+# 3:{"Nombre": "Cebolla", "Precio":1200}
+
+# }
+# print(ProductosDisc[1]["Precio"]) ## me da el precio de la maracuya ya que uso la key del diccionario
+# ##dentro del primer diccionario y despues nombro la info que quiero
+
+# print(ProductosDisc[2]["Nombre"]) ##lo mismo que lo anterior, aca solo pido el nombre del segundo diccionario interior
+
+# print("-"*80)
+
+# for num, veg in ProductosDisc.items():
+#     print(f"{num} {veg}")
+
+
+
+##### lista con diccionarios
+
+## productList = [
+## {"Nombre": Manzana, "Precio": "2000"} ### index #0
+## {"Nombre": Pera, "Precio": 3000}]     ### index #1
+
+Vegetales={
+    1:{"Nombre": "Maracuya", "Precio":3000},
+    2:{"Nombre": "Pera", "Precio":1500},
+    3:{"Nombre": "Zanahoria", "Precio":2000}
+
+}
+def Mostrar_Vegetales():
+    print("---"*40)
+
+    for key, informacon in Vegetales.items():
+        print(f"{key} {informacon}")
+
+    print("---"*40)
+def Ingresar_Vegetal():
+    print("Cual es el nombre del que deseas agregar?")
+    nombre = input()
+    print("cuales el precio?")
+    precio = int(input())
+    nuevokey = list(Vegetales.keys())[-1]### de la "lista" agarra los "4" pero eliimina 1 para que asi sean los que si existen??
+    Vegetales[nuevokey+1] = {"Nombre": nombre, "Precio": precio} ##debido a que las keys son solo los numeros del diccionario lo que
+    ###pondremos como segundo "parametro" es lo que queremos poner
+def Eliminar_Vegetal():
+    print("Que quiere eliminar?")    
+    Mostrar_Vegetales()
+    numero = int(input())
+    if numero in Vegetales:
+        print("Eliminando!")
+        del Vegetales[numero]
+def Actualizar_Vegetal():
+    Mostrar_Vegetales()
+    print("Cual vegetal quieres actualizar su precio?")
+    act = int(input())
+    if act in Vegetales:
+        print("Esto es lo que vas a cambiar")
+        print(Vegetales[act])
+        print("Dime el nombre")
+        CambioNombre = input()
+        Vegetales[act]["Nombre"] = CambioNombre
+        print("ahora dime el precio")
+        cambioPrecio = int(input())
+        Vegetales[act]["Precio"] = cambioPrecio
+
+
+
+while True:
+    try:
+        print("1.- Agregar Vegetal")
+        print("2.- Mostrar Vegetales ")
+        print("3.- Eliminar Vegetal")
+        print("4.- Actualizar Vegetal")
+        print("5.- Salir")
+
+        op = int(input())
+        match op:
+            case 1:
+                Ingresar_Vegetal()
+            case 2:
+                Mostrar_Vegetales()
+            case 3:
+                Eliminar_Vegetal()
+            case 4:
+                Actualizar_Vegetal()
+            case 5:
+                print("saliendo mi rei")
+                break
+            case _:
+                print("que wea pusiste wn")
+    except Exception as e:
+        print("Error", e)
